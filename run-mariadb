@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+podman run \
+  --detach \
+  --env MARIADB_ROOT_PASSWORD=test \
+  --env MARIADB_DATABASE=test \
+  --name activej-mariadb \
+  --publish 3306:3306 \
+  --rm \
+  docker.io/mariadb:latest
